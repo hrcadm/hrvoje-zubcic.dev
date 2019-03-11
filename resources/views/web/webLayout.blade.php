@@ -23,8 +23,8 @@
 
 <script type="text/javascript" src="{{ asset('js/modernizr.js') }}"></script><!-- Modernizer -->
 <script type="text/javascript" src="{{ asset('js/script.js') }}"></script><!-- Script -->
-<script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script><!-- Owl Carousal -->
-<script type="text/javascript" src="{{ asset('js/html5lightbox.js') }}"></script><!-- HTML -->
+{{--<script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script><!-- Owl Carousal -->--}}
+{{--<script type="text/javascript" src="{{ asset('js/html5lightbox.js') }}"></script><!-- HTML -->--}}
 <script type="text/javascript" src="{{ asset('js/scrolltopcontrol.js') }}"></script><!-- ScrolltoTop -->
 <script type="text/javascript" src="{{ asset('js/scrolly.js') }}"></script><!-- Parallax -->
 </body>
