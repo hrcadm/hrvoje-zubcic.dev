@@ -12,4 +12,27 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+   .sass('resources/sass/app.scss', 'public/css')
+
+    .copy('node_modules/jquery/dist/jquery.min.js', 'resources/assets/js')
+    .copy('node_modules/popper.js/dist/umd/popper.min.js', 'resources/assets/js')
+    .copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'resources/assets/js')
+    .copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'resources/assets/css')
+
+    .combine(
+        [
+            'resources/assets/js/jquery.min.js',
+            'resources/assets/js/popper.min.js',
+            'resources/assets/js/bootstrap.min.js',
+        ], './public/js/scripts.js'
+    )
+
+    .combine(
+        [
+            'resources/assets/css/bootstrap.min.css',
+            'resources/assets/css/font-awesome.min.css',
+            'resources/assets/css/responsive.css',
+            'resources/assets/css/style.css',
+            'resources/assets/css/colors/colors.css'
+        ], './public/css/main.css'
+    );
