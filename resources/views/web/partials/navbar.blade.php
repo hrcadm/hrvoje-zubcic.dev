@@ -39,10 +39,10 @@
                             <a href="{{ route('portfolio') }}">PORTFOLIO</a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="{{ route('blog.index') }}">BLOG</a>
+                            <a href="#">BLOG <small style="border:1px solid orangered;color:orangered;padding:3px">*soon*</small></a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="{{ route('contact') }}">CONTACT</a>
+                            <a href="{{ route('contact') }}">GET IN TOUCH</a>
                         </li>
                     </ul>
                 </nav>

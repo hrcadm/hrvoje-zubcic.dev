@@ -24,6 +24,8 @@ mix.js('resources/js/app.js', 'public/js')
             'resources/assets/js/jquery.min.js',
             'resources/assets/js/popper.min.js',
             'resources/assets/js/bootstrap.min.js',
+            'resources/assets/js/revolution/jquery.themepunch.tools.min.js',
+            'resources/assets/js/revolution/jquery.themepunch.revolution.min.js',
         ], './public/js/scripts.js'
     )
 
@@ -31,8 +33,12 @@ mix.js('resources/js/app.js', 'public/js')
         [
             'resources/assets/css/bootstrap.min.css',
             'resources/assets/css/font-awesome.min.css',
-            'resources/assets/css/responsive.css',
+            'resources/assets/css/owl.carousel.css',
             'resources/assets/css/style.css',
-            'resources/assets/css/colors/colors.css'
+            'resources/assets/css/responsive.css',
+            'resources/assets/css/colors/colors.css',
+            'resources/assets/css/revolution/settings.css',
+            'resources/assets/css/revolution/layers.css',
+            'resources/assets/css/revolution/navigation.css'
         ], './public/css/main.css'
     );

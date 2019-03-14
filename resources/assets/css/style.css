@@ -2980,10 +2980,6 @@ blockquote p {
 }
 .ceo-message-sec img {
     float: left;
-    width: 100%;
-}
-.ceo-message-sec .row > div{
-    display: table;
 }
 .ceo-message {
     background: #fff none repeat scroll 0 0;

@@ -8,15 +8,15 @@
                         <div class="logo">
                             <a href="#" title="">
                                 <i class="fa fa-get-pocket"></i>
-                                <span>MUSHI</span>
-                                <strong>Innovation is here</strong>
+                                <span>Hrvoje Zubcic</span>
+                                <strong>Power up your dream</strong>
                             </a>
                         </div><!-- LOGO -->
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
 
-                        <span><i class="fa fa-envelope"></i>examplecompany@gmail.com</span>
-                        <span><i class="fa fa-phone"></i>0900 (23456366)</span>
-                        <span><i class="fa fa-location-arrow"></i>4465 Washington Avenue De Pere, WI 54115</span>
+                        <span><i class="fa fa-envelope"></i>info@hrvoje-zubcic.dev</span>
+                        <span><i class="fa fa-phone"></i>+385 97 66 222 18</span>
+                        <span><i class="fa fa-location-arrow"></i>E. Kvaternika 1, 31540 Donji Miholjac, Croatia</span>
                     </div>
                 </div>
                 <div class="col-md-3 column">
@@ -42,8 +42,8 @@
                             <li><a href="{{ route('home') }}"><i class="fa fa-angle-right"></i> Home</a></li>
                             <li><a href="{{ route('about-me') }}"><i class="fa fa-angle-right"></i> About me</a></li>
                             <li><a href="{{ route('portfolio') }}"><i class="fa fa-angle-right"></i> Portfolio</a></li>
-                            <li><a href="{{ route('blog.index') }}"><i class="fa fa-angle-right"></i> Blog</a></li>
-                            <li><a href="{{ route('contact') }}"><i class="fa fa-angle-right"></i> Contact</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Blog <small style="border:1px solid orangered;color:orangered;padding:3px">*soon*</small></a></li>
+                            <li><a href="{{ route('contact') }}"><i class="fa fa-angle-right"></i> GET IN TOUCH</a></li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                         <div class="heading1">
                             <h2><span>Subscribe</span> Us</h2>
                         </div><!-- heading -->
-                        <p>Positioning the closest positioned for abs positioning</p>
+                        <p>Get the latest info first, sign up today!</p>
                         <form>
                             <label><i class="fa fa-envelope"></i><input type="text" placeholder="YOUR NAME" /></label>
                             <label><i class="fa fa-pencil"></i><input type="text" placeholder="TYPE YOUR EMAIL" /></label>
@@ -63,7 +63,7 @@
             </div>
         </div>
         <div style="text-align: center;margin-top: 3em;">
-            <span>Copyright All Right Reserved 2015 <a href="#" title="">Numberstheme</a></span>
+            <span>Copyright All Right Reserved 2019 <a href="#" title="">Hrvoje Zubcic</a></span>
         </div>
     </section>
 </footer>
