@@ -6,11 +6,8 @@
         <div class="container">
             <div class="inner-content">
                 <span><i class="fa fa-bolt"></i></span>
-                <h2>FAQ</h2>
-                <ul>
-                    <li><a href="#" title="">HOME</a></li>
-                    <li><a href="#" title="">FAQ</a></li>
-                </ul>
+                <h2>ABOUT ME</h2>
+                <ul><li></li></ul>
             </div>
         </div>
     </div><!-- inner Head -->
@@ -24,13 +21,12 @@
                             <div class="col-md-6">
                                 <div class="follow_widget widget">
                                     <div class="heading2">
-                                        <h3>Follow Us</h3>
+                                        <h3>Follow Me</h3>
                                     </div>
                                     <div class="social_widget">
-                                        <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                                        <a href="#" title=""><i class="fa fa-google-plus"></i></a>
-                                        <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                                        <a href="#" title=""><i class="fa fa-tumblr"></i></a>
+                                        <a href="https://github.com/hrcadm" target="_blank" title="Github Profile"><i class="fa fa-github"></i></a>
+                                        <a href="https://www.linkedin.com/in/hrvoje-zubcic/" target="_blank" title="Linkedin Profile"><i class="fa fa-linkedin"></i></a>
+                                        <a href="https://www.upwork.com/fl/hrvojezubcic" target="_blank" title="Upwork Profile"><i class="fa fa-behance"></i></a>
                                     </div>
                                 </div>
                                 <div class="fancy-mockup-image">

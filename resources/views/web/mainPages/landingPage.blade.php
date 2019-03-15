@@ -23,7 +23,7 @@
                                     <div class="service-simple">
                                         <i class="fa  fa-html5"></i>
                                         <h3>Legacy Projects</h3>
-                                        <p>Upgrading and/or fixing legacy projects (the nightmare of almost every developer)</p>
+                                        <p>Upgrading and/or fixing legacy projects to newer versions</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -37,7 +37,7 @@
                                     <div class="service-simple">
                                         <i class="fa  fa-check"></i>
                                         <h3>Code Quality</h3>
-                                        <p>I take pride in my code. Therefore, I always strive to write the best possible code</p>
+                                        <p>I take pride in my code. Therefore, I strive to write the best possible code</p>
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="step">
-                                <img src="http://placehold.it/640x650" alt="" />
+                                <img style="width:450px;height:455px;background-color: #171717" src="#" alt="" />
                                 <div class="step-info">
                                     <span>01</span>
                                     <h3>PLANNING</h3>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="step">
-                                <img src="http://placehold.it/640x650" alt="" />
+                                <img style="width:450px;height:455px;background-color: #171717" src="#" alt="" />
                                 <div class="step-info">
                                     <span>02</span>
                                     <h3>DEVELOPMENT</h3>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="step">
-                                <img src="http://placehold.it/640x650" alt="" />
+                                <img style="width:450px;height:455px;background-color: #171717" src="#" alt="" />
                                 <div class="step-info">
                                     <span>03</span>
                                     <h3>FINALIZING</h3>

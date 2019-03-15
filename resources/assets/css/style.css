@@ -3223,11 +3223,9 @@ blockquote p {
 }
 .contact-lists-sec li > i {
     color: #fff;
-    float: left;
     font-size: 17px;
     height: 54px;
     line-height: 54px;
-    margin-right: 25px;
     text-align: center;
     width: 54px;
 }

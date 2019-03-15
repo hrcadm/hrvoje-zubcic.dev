@@ -6,11 +6,8 @@
         <div class="container">
             <div class="inner-content">
                 <span><i class="fa fa-bolt"></i></span>
-                <h2>GET IN TOUCN NOW!</h2>
-                <ul>
-                    <li><a href="#" title="">HOME</a></li>
-                    <li><a href="#" title="">CONTACT US</a></li>
-                </ul>
+                <h2>GET IN TOUCN <span style="color: #FF2929">NOW!</span></h2>
+                <ul><li></li></ul>
             </div>
         </div>
     </div><!-- inner Head -->
@@ -18,17 +15,17 @@
     <section class="block">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="contact-lists-sec">
+                <div class="col-md-12" >
+                    <div class="contact-lists-sec" style="text-align: center">
                         <ul>
                             <li>
-                                <i class="fa fa-phone"></i>021 (4568432-5)  (7654357-0)
+                                <i class="fa fa-phone"></i><br>+385 97 662 2218
                             </li>
                             <li>
-                                <i class="fa fa-at"></i>yourcompany@email.com
+                                <i class="fa fa-at"></i><br>info@hrvoje-zubcic.dev
                             </li>
                             <li>
-                                <i class="fa fa-support"></i>Get Free Support  24/7
+                                <i class="fa fa-map-marker"></i><br>Donji Miholjac - Europe/Croatia
                             </li>
                         </ul>
                     </div>
@@ -38,30 +35,11 @@
     </section>
 
     <section class="block remove-top">
-        <div class="contact-details">
-
-                <div class="contact-infos" style="text-align: center">
-                    <ul>
-                        <li>
-                            <span><i class="fa fa-phone"></i> Address</span>
-                            <p>765 Shuttle Swift Area <br>at New Born Road </p>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-fax"></i> Fax/Email</span>
-                            <p>674-46-7-0,   234-8-987 <br>hello@email.com</p>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-    </section>
-
-    <section class="block remove-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12">
                     <div class="heading4">
-                        <h2>CONTACT US</h2>
-                        <span>Easy to Customize</span>
+                        <h2>CONTACT ME</h2>
                     </div>
                     <div id="contact">
                         <div class="contact-form">

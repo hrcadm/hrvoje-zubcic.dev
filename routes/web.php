@@ -14,5 +14,5 @@
 Route::get('/', 'PagesController@landingPage')->name('home');
 Route::get('about-me', 'PagesController@aboutMe')->name('about-me');
 Route::get('portfolio', 'PagesController@portfolio')->name('portfolio');
-//Route::get('blog', 'BlogController@index')->name('blog.index');
+Route::get('blog', 'BlogController@index')->name('blog.index');
 Route::get('contact', 'PagesController@contact')->name('contact');
