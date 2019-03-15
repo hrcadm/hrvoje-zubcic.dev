@@ -11,8 +11,27 @@
 |
 */
 
+// Authentication Routes...
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Registration Routes...
+/*Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');*/
+
+// Password Reset Routes...
+/*Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');*/
+
 Route::get('/', 'PagesController@landingPage')->name('home');
 Route::get('about-me', 'PagesController@aboutMe')->name('about-me');
 Route::get('portfolio', 'PagesController@portfolio')->name('portfolio');
-Route::get('blog', 'BlogController@index')->name('blog.index');
+Route::get('blog', 'PagesController@blog')->name('blog.index');
 Route::get('contact', 'PagesController@contact')->name('contact');
+
+Route::prefix('admin')->group(function () {
+    Route::get('home', 'Admin\HomeController@index')->name('adminHome');
+});

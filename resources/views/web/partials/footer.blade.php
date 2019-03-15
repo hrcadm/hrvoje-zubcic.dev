@@ -54,8 +54,8 @@
                         </div><!-- heading -->
                         <p>Get the latest info first, sign up today!</p>
                         <form>
-                            <label><i class="fa fa-envelope"></i><input type="text" placeholder="YOUR NAME" /></label>
-                            <label><i class="fa fa-pencil"></i><input type="text" placeholder="TYPE YOUR EMAIL" /></label>
+                            <label><i class="fa fa-envelope"></i><input type="text" placeholder="YOUR FULL NAME" /></label>
+                            <label><i class="fa fa-pencil"></i><input type="email" placeholder="YOUR EMAIL" /></label>
                             <button type="submit" class="flat-btn">SUBSCRIBE</button>
                         </form>
                     </div>

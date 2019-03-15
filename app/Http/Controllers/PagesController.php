@@ -21,6 +21,11 @@ class PagesController extends Controller
         return view('web.mainPages.portfolio');
     }
 
+    public function blog()
+    {
+        return view('web.blog.index');
+    }
+
     public function contact()
     {
         return view('web.mainPages.contact');
