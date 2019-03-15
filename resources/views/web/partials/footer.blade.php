@@ -8,28 +8,28 @@
                         <div class="logo">
                             <a href="#" title="">
                                 <i class="fa fa-get-pocket"></i>
-                                <span>MUSHI</span>
-                                <strong>Innovation is here</strong>
+                                <span>Hrvoje Zubcic</span>
+                                <strong>Power up your dream</strong>
                             </a>
                         </div><!-- LOGO -->
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
+                        <ul class="social-btns">
+                            <li><a href="https://github.com/hrcadm" target="_blank" title="Github Profile"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/hrvoje-zubcic/" target="_blank" title="Linkedin Profile"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.upwork.com/fl/hrvojezubcic" target="_blank" title="Upwork Profile"><i class="fa fa-behance"></i></a></li>
+                        </ul>
 
-                        <span><i class="fa fa-envelope"></i>examplecompany@gmail.com</span>
-                        <span><i class="fa fa-phone"></i>0900 (23456366)</span>
-                        <span><i class="fa fa-location-arrow"></i>4465 Washington Avenue De Pere, WI 54115</span>
+                        <span><i class="fa fa-envelope"></i>info@hrvoje-zubcic.dev</span>
+                        <span><i class="fa fa-phone"></i>+385 97 66 222 18</span>
+                        <span><i class="fa fa-location-arrow"></i>E. Kvaternika 1, 31540 Donji Miholjac, Croatia</span>
                     </div>
                 </div>
                 <div class="col-md-3 column">
                     <div class="flickr_widget widget">
                         <div class="heading1">
-                            <h2><span>SOCIAL MEDIA</span></h2>
+                            <h2><span>Recent posts</span></h2>
                         </div>
                         <div class="flickr_images">
-                            <a href="https://www.linkedin.com/in/hrvoje-zubcic/" target="_blank" title="Linkedin" style="background-color: rgba(0,0,0,0)"><img src="{{ asset('images/socialMedia/linkedin.png') }}" alt="linkedin" /></a>
-                            <a href="http://github.com/hrcadm" target="_blank" title="Github" style="background-color: rgba(0,0,0,0)"><img src="{{ asset('images/socialMedia/github.png') }}" alt="github" /></a>
-                            <a href="https://www.upwork.com/fl/hrvojezubcic" target="_blank" title="Upwork" style="background-color: rgba(0,0,0,0)"><img src="{{ asset('images/socialMedia/upwork.png') }}" alt="upwork" /></a>
-
-                            {{--<span>Follow <a href="#" title="">@mushithemes</a></span>--}}
+                            <span>No activity yet...</span>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                             <li><a href="{{ route('about-me') }}"><i class="fa fa-angle-right"></i> About me</a></li>
                             <li><a href="{{ route('portfolio') }}"><i class="fa fa-angle-right"></i> Portfolio</a></li>
                             <li><a href="{{ route('blog.index') }}"><i class="fa fa-angle-right"></i> Blog</a></li>
-                            <li><a href="{{ route('contact') }}"><i class="fa fa-angle-right"></i> Contact</a></li>
+                            <li><a href="{{ route('contact') }}"><i class="fa fa-angle-right"></i> GET IN TOUCH</a></li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                         <div class="heading1">
                             <h2><span>Subscribe</span> Us</h2>
                         </div><!-- heading -->
-                        <p>Positioning the closest positioned for abs positioning</p>
+                        <p>Get the latest info first, sign up today!</p>
                         <form>
                             <label><i class="fa fa-envelope"></i><input type="text" placeholder="YOUR NAME" /></label>
                             <label><i class="fa fa-pencil"></i><input type="text" placeholder="TYPE YOUR EMAIL" /></label>
@@ -63,7 +63,7 @@
             </div>
         </div>
         <div style="text-align: center;margin-top: 3em;">
-            <span>Copyright All Right Reserved 2015 <a href="#" title="">Numberstheme</a></span>
+            <span>Copyright &copy; All Right Reserved 2019 &#8226; Developed by: <a href="mailto:info@hrvoje-zubcic.dev" title="">Hrvoje Zubcic</a></span>
         </div>
     </section>
 </footer>

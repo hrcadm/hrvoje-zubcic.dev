@@ -42,7 +42,7 @@
                             <a href="{{ route('blog.index') }}">BLOG</a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="{{ route('contact') }}">CONTACT</a>
+                            <a href="{{ route('contact') }}">GET IN TOUCH</a>
                         </li>
                     </ul>
                 </nav>
