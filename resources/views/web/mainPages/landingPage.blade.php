@@ -48,13 +48,13 @@
         </div>
     </section>
 
-    <section class="block no-padding">
+    <section class="block">
         <div class="row">
             <div class="col-md-12">
                 <div class="steps-sec with-color">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="step">
+                            <div class="step" style="background-color: #171717; height: 100%">
                                 <img style="width:450px;height:455px;background-color: #171717" src="#" alt="" />
                                 <div class="step-info">
                                     <span>01</span>
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="step">
+                            <div class="step" style="background-color: #171717; height: 100%">
                                 <img style="width:450px;height:455px;background-color: #171717" src="#" alt="" />
                                 <div class="step-info">
                                     <span>03</span>
@@ -90,25 +90,26 @@
         </div>
     </section>
 
-    <section class="block">
+    <section class="block" style="margin-bottom:5em;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="ceo-message-sec">
                         <div class="row">
                             <div class="col-md-7">
-                                <img src="http://placehold.it/670x591" alt="" />
+                                <img src="{{ asset('images/Untitled-5-1024x576.png') }}" style="width:100%;height:100%;" alt="pic" />
                             </div>
                             <div class="col-md-5">
-                                <div class="ceo-message">
+                                <div class="ceo-message" style="float:none;padding: 43px 70px;">
                                     <span>Hrvoje Zubcic</span>
                                     <img src="{{ asset('images/ja1.png') }}" alt="hzdm">
-                                    <p>Programming has been my passion since the young age, when I was exploring the world of web apps, desktop apps etc. I've always been intrigued by how the things work behind the scenes and the logic that powers it, since I wasn't that much into the design.</p>
+                                    <p>Programming has been my passion since the young age, when I was exploring the world of web apps, desktop apps etc.
+                                        I've always been intrigued by how the things work behind the scenes and the logic that powers it.</p>
                                     <a href="{{ route('about-me') }}" title="" class="flat-btn">MORE...</a>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- Ceo message sec -->
+                    </div>
                 </div>
             </div>
         </div>

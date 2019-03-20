@@ -18,7 +18,12 @@ class PagesController extends Controller
 
     public function portfolio()
     {
-        return view('web.mainPages.portfolio');
+        return view('web.portfolio.index');
+    }
+
+    public function blog()
+    {
+        return view('web.blog.index');
     }
 
     public function contact()

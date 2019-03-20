@@ -329,7 +329,7 @@ iframe{
     -o-border-radius: 3px;
     border-radius: 3px;
 
-    color: #dfdfdf;
+    color: #FF2929;
     float: left;
     font-size: 11px;
     height: 26px;
@@ -755,7 +755,7 @@ footer .blackish::before {
 }
 .social-btns > li > a {
     background: #0d0d0d none repeat scroll 0 0;
-    color: #a7a7a7;
+    color: #FF2929;
     float: left;
     font-size: 14px;
     height: 39px;
@@ -764,7 +764,7 @@ footer .blackish::before {
     width: 39px;
 }
 .social-btns > li:hover > a{
-    color: #fff;
+    color: #000;
 }
 .social-btns > li::before {
     content: "";
@@ -5112,4 +5112,16 @@ footer.light-footer .bottom-line a {
     -o-border-radius: 50%;
     border-radius: 50%;
 }
+.blinkMe {
+    animation: blinker 1s linear infinite;
+}
+.blinkMe:hover {
+    animation: blinker 1s linear infinite;
+}
 
+@keyframes blinker {
+    50% {
+        opacity: 0;
+        color: #000;
+    }
+}
