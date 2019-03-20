@@ -29,19 +29,19 @@
                 <span class="menu-toggle"><i class="fa fa-bars"></i></span>
                 <nav>
                     <ul>
-                        <li class="menu-item-has-children mega">
+                        <li class="menu-item-has-children {{ (Route::currentRouteName() === 'home' ? 'active-navbar-item' : '') }}">
                             <a href="{{ route('home') }}">HOME</a>
                         </li>
-                        <li class="menu-item-has-children">
+                        <li class="menu-item-has-children {{ (Route::currentRouteName() === 'about-me' ? 'active-navbar-item' : '') }}">
                             <a href="{{ route('about-me') }}">ABOUT ME</a>
                         </li>
-                        <li class="menu-item-has-children">
+                        <li class="menu-item-has-children {{ (Route::currentRouteName() === 'portfolio' ? 'active-navbar-item' : '') }}">
                             <a href="{{ route('portfolio') }}">PORTFOLIO</a>
                         </li>
-                        <li class="menu-item-has-children">
+                        <li class="menu-item-has-children {{ (Route::currentRouteName() === 'blog.index' ? 'active-navbar-item' : '') }}">
                             <a href="{{ route('blog.index') }}">BLOG</a>
                         </li>
-                        <li class="menu-item-has-children">
+                        <li class="menu-item-has-children {{ (Route::currentRouteName() === 'contact' ? 'active-navbar-item' : '') }}">
                             <a href="{{ route('contact') }}">GET IN TOUCH <span class="blinkMe" style="color: #ff2929">NOW !</span></a>
                         </li>
                     </ul>

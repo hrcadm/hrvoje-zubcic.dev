@@ -6,13 +6,20 @@
         <div class="container">
             <div class="inner-content">
                 <span><i class="fa fa-bolt"></i></span>
-                <h2>Project Title</h2>
+                <h2>MINGO</h2>
                 <ul><li></li></ul>
             </div>
         </div>
     </div>
 
-    <section class="block">
-        <p>Project details</p>
+    <section class="block" style="margin-bottom:5em;">
+        <div class="container">
+            <h3>Project details</h3>
+            <p></p>
+
+            <h4>Tech Stack</h4>
+            <span class="tech-stack-item">PHP</span>
+            <span class="tech-stack-item">Laravel</span>
+        </div>
     </section>
 @endsection

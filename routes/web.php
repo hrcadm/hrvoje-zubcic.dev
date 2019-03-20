@@ -35,6 +35,11 @@ Route::get('contact', 'PagesController@contact')->name('contact');
 Route::post('subscribe-us', 'SubscriptionController@subscribe')->name('subscribe-us');
 Route::post('contact-form-request', 'ContactFormController@contactFormSubmission')->name('contact-form-request');
 
+// Static routes for the projects for now
+Route::get('projects/brocando', 'ProjectController@brocando')->name('project.brocando');
+Route::get('projects/giftcash', 'ProjectController@giftcash')->name('project.giftcash');
+Route::get('projects/mingo', 'ProjectController@mingo')->name('project.mingo');
+
 Route::prefix('admin')->group(function () {
     Route::get('home', 'Admin\HomeController@index')->name('adminHome');
 });
