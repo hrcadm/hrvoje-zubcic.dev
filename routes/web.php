@@ -32,6 +32,9 @@ Route::get('portfolio', 'PagesController@portfolio')->name('portfolio');
 Route::get('blog', 'PagesController@blog')->name('blog.index');
 Route::get('contact', 'PagesController@contact')->name('contact');
 
+Route::post('subscribe-us', 'SubscriptionController@subscribe')->name('subscribe-us');
+Route::post('contact-form-request', 'ContactFormController@contactFormSubmission')->name('contact-form-request');
+
 Route::prefix('admin')->group(function () {
     Route::get('home', 'Admin\HomeController@index')->name('adminHome');
 });

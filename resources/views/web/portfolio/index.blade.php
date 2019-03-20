@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="inner-head overlap">
-        <div data-velocity="-.2" style="background: url(http://placehold.it/1500x1100) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
+        <div data-velocity="-.2" style="background: repeat scroll 50% 422.28px #CCCCCC;" class="parallax scrolly-invisible no-parallax"></div>
         <div class="container">
             <div class="inner-content">
                 <span><i class="fa fa-bolt"></i></span>
@@ -10,27 +10,14 @@
                 <ul><li></li></ul>
             </div>
         </div>
-    </div><!-- inner Head -->
+    </div>
 
-    <section class="block">
+    <section class="block" style="margin-bottom:5em;">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 column">
                     <div class="portfolio-mini-sec">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="mini-portfolio">
-                                    <img alt="" src="http://placehold.it/270x345">
-                                    <div class="portfolio-info">
-                                        <span>Design</span>
-                                        <h3>MUSHI is fully Hand Crafted Design</h3>
-                                        <ul>
-                                            <li><button class="btn" style="background-color: #FF2929;color:#fff"><i class="fa fa-link"></i> See more...</button></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('web.portfolio.portfolioSingle')
                     </div>
                 </div>
                 <aside class="col-md-4 column">
@@ -39,8 +26,8 @@
                             <h3>Featured Project</h3>
                         </div>
                         <div class="meet_admin">
-                            <div class="mini-portfolio">
-                                <img alt="" src="http://placehold.it/270x345">
+                            <div class="mini-portfolio" style="width:300px;height:400px;background-color: rgba(0,0,0,0.3)">
+                                <img alt="" src="#">
                                 <div class="portfolio-info">
                                     <span>Design</span>
                                     <h3>MUSHI is fully Hand Crafted Design</h3>

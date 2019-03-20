@@ -7,9 +7,9 @@
                     <li><i class="fa fa-mobile"></i>+385 97 66 222 18</li>
                 </ul>
                 <div class="choose-language">
-                    <a href="#" title="">HR</a>
-                    <a href="#" title="">EN</a>
-                    <a href="#" title="">DE</a>
+                    <a href="https://www.linkedin.com/in/hrvoje-zubcic/" target="_blank" title="Linkedin Profile"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/hrcadm" target="_blank" title="Github Profile"><i class="fa fa-github" ></i></a>
+                    <a href="https://www.upwork.com/fl/hrvojezubcic" target="_blank" title="Upwork Profile"><i class="fa fa-behance"></i></a>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
                             <a href="{{ route('blog.index') }}">BLOG</a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="{{ route('contact') }}">GET IN TOUCH</a>
+                            <a href="{{ route('contact') }}">GET IN TOUCH <span class="blinkMe" style="color: #ff2929">NOW !</span></a>
                         </li>
                     </ul>
                 </nav>

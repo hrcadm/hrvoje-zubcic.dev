@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="inner-head overlap">
-        <div data-velocity="-.2" style="background: url(http://placehold.it/1500x1100) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
+        <div data-velocity="-.2" style="background: repeat scroll 50% 422.28px #CCCCCC;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
         <div class="container">
             <div class="inner-content">
                 <span><i class="fa fa-bolt"></i></span>
@@ -43,7 +43,8 @@
                     </div>
                     <div id="contact">
                         <div class="contact-form">
-                            <form method="post" action="contact.php" name="contactform" id="contactform">
+                            <form method="post" action="{{ route('contact-form-request') }}">
+                                {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-md-12">
                                         <i class="fa fa-user"></i>
@@ -59,12 +60,12 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <i class="fa fa-pencil"></i>
-                                        <textarea name="comments" id="comments" class="input-style" placeholder="Message"></textarea>
+                                        <textarea name="message" id="message" class="input-style" placeholder="Message"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <input type="submit" class="form-control" id="submit" value="Submit" style="background-color: #ff2929;color:#fff;"/>
+                                        <input type="submit" class="flat-btn" id="submit" value="Submit"/>
                                     </div>
                                 </div>
                             </form>

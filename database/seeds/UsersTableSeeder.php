@@ -5,6 +5,7 @@ use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
 {
+    // TODO: Remove this class before production!
     /**
      * Run the database seeds.
      *

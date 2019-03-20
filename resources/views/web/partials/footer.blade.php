@@ -13,8 +13,8 @@
                             </a>
                         </div><!-- LOGO -->
                         <ul class="social-btns">
-                            <li><a href="https://github.com/hrcadm" target="_blank" title="Github Profile"><i class="fa fa-github"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/hrvoje-zubcic/" target="_blank" title="Linkedin Profile"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/hrcadm" target="_blank" title="Github Profile"><i class="fa fa-github"></i></a></li>
                             <li><a href="https://www.upwork.com/fl/hrvojezubcic" target="_blank" title="Upwork Profile"><i class="fa fa-behance"></i></a></li>
                         </ul>
 
@@ -43,7 +43,7 @@
                             <li><a href="{{ route('about-me') }}"><i class="fa fa-angle-right"></i> About me</a></li>
                             <li><a href="{{ route('portfolio') }}"><i class="fa fa-angle-right"></i> Portfolio</a></li>
                             <li><a href="{{ route('blog.index') }}"><i class="fa fa-angle-right"></i> Blog</a></li>
-                            <li><a href="{{ route('contact') }}"><i class="fa fa-angle-right"></i> GET IN TOUCH</a></li>
+                            <li><a href="{{ route('contact') }}"><i class="fa fa-angle-right"></i> GET IN TOUCH <span class="blinkMe" style="color: #ff2929">NOW!</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -53,9 +53,10 @@
                             <h2><span>Subscribe</span> Us</h2>
                         </div><!-- heading -->
                         <p>Get the latest info first, sign up today!</p>
-                        <form>
-                            <label><i class="fa fa-envelope"></i><input type="text" placeholder="YOUR FULL NAME" /></label>
-                            <label><i class="fa fa-pencil"></i><input type="email" placeholder="YOUR EMAIL" /></label>
+                        <form method="POST" action="{{ route('subscribe-us') }}">
+                            {{ csrf_field() }}
+                            <label><i class="fa fa-pencil"></i><input type="text" name="subscriberName" placeholder="YOUR FULL NAME" /></label>
+                            <label><i class="fa fa-envelope"></i><input type="email" name="subscriberEmail" placeholder="YOUR EMAIL" /></label>
                             <button type="submit" class="flat-btn">SUBSCRIBE</button>
                         </form>
                     </div>
