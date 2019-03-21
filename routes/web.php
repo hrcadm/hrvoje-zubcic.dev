@@ -40,17 +40,29 @@ Route::get('projects/brocando', 'ProjectController@brocando')->name('project.bro
 Route::get('projects/giftcash', 'ProjectController@giftcash')->name('project.giftcash');
 Route::get('projects/mingo', 'ProjectController@mingo')->name('project.mingo');
 
-Route::prefix('hrca')->group(function () {
+Route::prefix('hrca')->middleware('auth')->group(function () {
     Route::get('home', 'Admin\HomeController@index')->name('adminHome');
 
-    Route::get('all-posts', 'Admin\PostController@showAllPosts')->name('adminAllPosts');
-    Route::get('new-post', 'Admin\PostController@newPost')->name('adminNewPost');
+    Route::prefix('posts')->group(function () {
+        Route::get('all', 'Admin\PostController@showAllPosts')->name('adminAllPosts');
+        Route::get('new', 'Admin\PostController@newPost')->name('adminNewPost');
+    });
 
-    Route::get('all-projects', 'Admin\ProjectController@showAllProjects')->name('adminAllProjects');
-    Route::get('new-project', 'Admin\ProjectController@newProject')->name('adminNewProject');
+    Route::prefix('projects')->group(function () {
+        Route::get('all', 'Admin\ProjectController@showAllProjects')->name('adminAllProjects');
+        Route::get('new', 'Admin\ProjectController@newProject')->name('adminNewProject');
+    });
 
-    Route::get('all-testimonials', 'Admin\TestimonialController@showAllTestimonials')->name('adminAllTestimonials');
-    Route::get('new-testimonial', 'Admin\TestimonialController@newTestimonial')->name('adminNewTestimonial');
+    Route::prefix('testimonials')->group(function () {
+        Route::get('all', 'Admin\TestimonialController@index')->name('adminAllTestimonials');
+        Route::get('new', 'Admin\TestimonialController@create')->name('adminNewTestimonial');
+        Route::get('edit/{id}', 'Admin\TestimonialController@edit')->name('adminEditTestimonial');
+        Route::get('show/{id}', 'Admin\TestimonialController@show')->name('adminShowTestimonial');
+
+        Route::put('update/{id}', 'Admin\TestimonialController@update')->name('adminUpdateTestimonial');
+        Route::post('store', 'Admin\TestimonialController@store')->name('adminStoreTestimonial');
+        Route::delete('delete/{id}', 'Admin\TestimonialController@destroy')->name('adminDeleteTestimonial');
+    });
 
     Route::get('contact-form-submissions', 'Admin\ContactFormController@showAllFormSubmissions')->name('adminAllContactFormSubmissions');
 

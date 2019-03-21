@@ -34,7 +34,7 @@ class TestimonialSeeder extends Seeder
                 'testimonial_order' => 3,
                 'testimonial_author_name' => 'Jay Syzdek',
                 'testimonial_author_role' => 'CTO',
-                'testimonial_note' => 'test note',
+                'testimonial_note' => null,
                 'testimonial_author_company' => 'Digital Marketing Group LLC',
                 'testimonial_content' => 'One of the best people I\'ve worked with in years. Highly recommend!'
             ]

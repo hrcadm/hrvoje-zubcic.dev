@@ -117,7 +117,7 @@
                             <span style="color: #FF2929">@</span> GiftCash Inc
                         @endif
                         @if($testimonial->testimonial_note !== null)
-                            <span> - {{ $testimonial->testimonial_note }}</span>
+                            <br><em> - {{ $testimonial->testimonial_note }}</em>
                             @endif
                     </strong>
                 </p>
