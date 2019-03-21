@@ -969,7 +969,7 @@ footer .blackish::before {
     width: 100%;
 }
 .meet_admin::before {
-    background: rgba(0, 0, 0, 0) url("../images/layer.png") no-repeat scroll 0 0 / 100% 100%;
+    background: rgba(0, 0, 0, 0) no-repeat scroll 0 0 / 100% 100%;
     content: "";
     height: 100%;
     left: 0;

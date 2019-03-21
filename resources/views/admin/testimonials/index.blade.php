@@ -2,6 +2,20 @@
 
 @section('content')
 
+    @if (\Session::has('msg') && \Session::get('msg') === 'successNewTestimonial')
+       <div class="alert alert-success">
+           Testimonial Added Successfully!
+       </div>
+    @elseif(\Session::has('msg') && \Session::get('msg') === 'successUpdateTestimonial')
+        <div class="alert alert-success">
+            Testimonial Updated Successfully!
+        </div>
+    @elseif(\Session::has('msg') && \Session::get('msg') === 'successDeleteTestimonial')
+        <div class="alert alert-success">
+            Testimonial Deleted Successfully!
+        </div>
+    @endif
+
     <a href="{{ route('adminNewTestimonial') }}" class="btn btn-outline-success">Create New Testimonial</a>
 
     <table class="table table-responsive table-hover"  style="width: auto; margin-top:2em;">
@@ -32,7 +46,7 @@
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                             <input type="hidden">
-                            <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                            <input type="submit" class="btn btn-sm btn-danger" value="Delete" onclick="return confirm('Are you sure?')">
                         </form>
                     </td>
                 </tr>

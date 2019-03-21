@@ -78,16 +78,27 @@
                             </div>
 
                             <div class="col-md-4">
-                                <div class="mini-portfolio text-center" style="width:230px;height:300px;">
-                                    <p style="margin-top:50%;"><strong>More to be added soon...</strong></p>
+                                <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
+                                    <img alt="opgdumancic-project" src="{{ asset('images/projectImages/dmg.png') }}" style="margin:40% 0 0 10%;">
                                     <div class="portfolio-info">
-                                        <h3>More to be added soon...</h3>
+                                        <span>UI/UX Development</span>
+                                        <h3>HTML/CSS/JS</h3>
+                                        <small>Presentational website for local groceries seller.</small>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
+                        <div class="row text-center mt-5">
+                            <div class="col-md-12">
+                                <span style="color:#FF2929"><strong>More to be added soon...</strong></span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
                 <aside class="col-md-4 column">
                     <div class="admin_widget widget">
                         <div class="heading2">
@@ -107,6 +118,7 @@
 
                 </aside>
             </div>
+
         </div>
     </section>
 @endsection

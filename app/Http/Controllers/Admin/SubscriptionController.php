@@ -10,8 +10,8 @@ class SubscriptionController extends Controller
 {
     public function showAllSubscriptions()
     {
-        $subscribers = Subscription::all();
+        $subscriptions = Subscription::all();
 
-        return view('admin.subscriptionsIndex', compact('subscribers'));
+        return view('admin.subscriptionsIndex', compact('subscriptions'));
     }
 }

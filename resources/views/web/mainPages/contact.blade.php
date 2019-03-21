@@ -68,13 +68,13 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <i class="fa fa-pencil"></i>
-                                        <textarea name="message" id="message" class="input-style" placeholder="Write you message here...">{{ old('message') }}</textarea>
+                                        <textarea name="message" id="message" class="input-style" placeholder="Write you message here..." @if ($errors->contactError->any()) autofocus @endif>{{ old('message') }}</textarea>
                                     </div>
                                 </div>
-                                @if ($errors->any())
+                                @if ($errors->contactError->any())
                                     <div class="alert alert-danger">
                                         <ul>
-                                            @foreach ($errors->all() as $error)
+                                            @foreach ($errors->contactError->all() as $error)
                                                 <li>{{ $error }}</li>
                                             @endforeach
                                         </ul>

@@ -54,8 +54,8 @@
                         </div><!-- heading -->
                         @if (\Session::has('msg') && \Session::get('msg') === 'successSubscribe')
                             <p>Thanks for subscribing!</p>
-                        @elseif($errors->any())
-                            @foreach ($errors->all() as $error)
+                        @elseif($errors->subscribeError->any())
+                            @foreach ($errors->subscribeError->all() as $error)
                                 <p class="alert alert-danger" style="color:#000000">{{ $error }}</p>
                             @endforeach
                         @else
@@ -63,9 +63,9 @@
                         @endif
                         <form method="POST" action="{{ route('subscribe-us') }}">
                             {{ csrf_field() }}
-                            <label><i class="fa fa-pencil"></i><input type="text" name="subscriberName" placeholder="YOUR FULL NAME" value="{{ old('subscriberName') }}"/></label>
-                            <label><i class="fa fa-envelope"></i><input type="email" name="subscriberEmail" placeholder="YOUR EMAIL" value="{{ old('subscriberEmail') }}" autofocus /></label>
-                            <button type="submit" class="flat-btn">SUBSCRIBE</button>
+                            <label><i class="fa fa-pencil"></i><input type="text" name="subscriberName" placeholder="YOUR FULL NAME" @if(\Session::has('msg') === false) value="{{ old('subscriberName') }}" @endif /></label>
+                            <label><i class="fa fa-envelope"></i><input type="email" name="subscriberEmail" placeholder="YOUR EMAIL" @if(\Session::has('msg') === false) value="{{ old('subscriberEmail') }}" @endif @if($errors->subscribeError->any()) autofocus @endif /></label>
+                            <button type="submit" class="flat-btn" name="submitSubscription">SUBSCRIBE</button>
                         </form>
                     </div>
                 </div>
@@ -76,3 +76,20 @@
         </div>
     </section>
 </footer>
+
+@section('customJavascript')
+    <script>
+        $(document).ready(function() {
+            let checkMsg = '{{\Session::has('msg')}}';
+
+            if(checkMsg === '1')
+            {
+                let msg = '{{\Session::get('msg')}}';
+
+                if(msg === 'successSubscribe'){
+                    alert('Thanks for Subscribing!');
+                }
+            }
+        });
+    </script>
+@endsection
