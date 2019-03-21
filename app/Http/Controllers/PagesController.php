@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -13,7 +14,9 @@ class PagesController extends Controller
 
     public function aboutMe()
     {
-        return view('web.mainPages.about-me');
+        $testimonials = Testimonial::orderBy('testimonial_order', 'asc')->get();
+
+        return view('web.mainPages.aboutMe', compact('testimonials'));
     }
 
     public function portfolio()

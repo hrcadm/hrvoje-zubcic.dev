@@ -10,7 +10,15 @@
                 <ul><li></li></ul>
             </div>
         </div>
-    </div><!-- inner Head -->
+    </div>
+
+    @if (\Session::has('msg') && \Session::get('msg') === 'successContact')
+    <div class="block">
+        <div class="container text-center">
+            <p class="alert alert-success"><strong> Thank you for your interest! <br> I'll get back to you as soon as possible.</strong></p>
+        </div>
+    </div>
+    @endif
 
     <section class="block">
         <div class="container">
@@ -48,24 +56,33 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <i class="fa fa-user"></i>
-                                        <input name="name" type="text" id="name" class="input-style" placeholder="Name" />
+                                        <input name="name" type="text" id="name" class="input-style" placeholder="Full Name" value="{{ old('name') }}" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <i class="fa fa-at"></i>
-                                        <input name="email" type="text" id="email" class="input-style" placeholder="Email" />
+                                        <input name="email" type="text" id="email" class="input-style" placeholder="Email Address" value="{{ old('email') }}" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <i class="fa fa-pencil"></i>
-                                        <textarea name="message" id="message" class="input-style" placeholder="Message"></textarea>
+                                        <textarea name="message" id="message" class="input-style" placeholder="Write you message here...">{{ old('message') }}</textarea>
                                     </div>
                                 </div>
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <input type="submit" class="flat-btn" id="submit" value="Submit"/>
+                                        <input type="submit" class="flat-btn" id="submit" value="Submit" style="float:right;"/>
                                     </div>
                                 </div>
                             </form>
