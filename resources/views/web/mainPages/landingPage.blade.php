@@ -60,7 +60,7 @@
                                     <span>01</span>
                                     <h3>PLANNING</h3>
                                     <p>The first phase is putting the plan on the paper, write documentation and specifications. </p>
-                                    <a href="#" title="" class="flat-btn">GET IN TOUCH NOW!</a>
+                                    <a href="{{ route('contact') }}" title="" class="flat-btn">GET IN TOUCH NOW!</a>
                                 </div>
                             </div>
                         </div>

@@ -2588,7 +2588,6 @@ blockquote p {
 }
 .mini-portfolio > img {
     float: left;
-    width: 100%;
 }
 .mini-portfolio::before {
     background: #fff none repeat scroll 0 0;
@@ -5124,4 +5123,19 @@ footer.light-footer .bottom-line a {
         opacity: 0;
         color: #000;
     }
+}
+
+.active-navbar-item {
+    background-color: #FF2929;
+}
+
+.tech-stack-item {
+    border-bottom: 3px solid #FF2929;
+    font-weight: 600;
+}
+
+.tech-stack-item:hover {
+    border-bottom: 3px solid #000;
+    color: #FF2929;
+    font-weight: 600;
 }

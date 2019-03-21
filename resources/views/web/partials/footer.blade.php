@@ -52,11 +52,19 @@
                         <div class="heading1">
                             <h2><span>Subscribe</span> Us</h2>
                         </div><!-- heading -->
-                        <p>Get the latest info first, sign up today!</p>
+                        @if (\Session::has('msg') && \Session::get('msg') === 'successSubscribe')
+                            <p>Thanks for subscribing!</p>
+                        @elseif($errors->any())
+                            @foreach ($errors->all() as $error)
+                                <p class="alert alert-danger" style="color:#000000">{{ $error }}</p>
+                            @endforeach
+                        @else
+                            <p>Get the latest info first, sign up today!</p>
+                        @endif
                         <form method="POST" action="{{ route('subscribe-us') }}">
                             {{ csrf_field() }}
-                            <label><i class="fa fa-pencil"></i><input type="text" name="subscriberName" placeholder="YOUR FULL NAME" /></label>
-                            <label><i class="fa fa-envelope"></i><input type="email" name="subscriberEmail" placeholder="YOUR EMAIL" /></label>
+                            <label><i class="fa fa-pencil"></i><input type="text" name="subscriberName" placeholder="YOUR FULL NAME" value="{{ old('subscriberName') }}"/></label>
+                            <label><i class="fa fa-envelope"></i><input type="email" name="subscriberEmail" placeholder="YOUR EMAIL" value="{{ old('subscriberEmail') }}" autofocus /></label>
                             <button type="submit" class="flat-btn">SUBSCRIBE</button>
                         </form>
                     </div>

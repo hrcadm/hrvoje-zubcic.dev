@@ -17,7 +17,75 @@
             <div class="row">
                 <div class="col-md-8 column">
                     <div class="portfolio-mini-sec">
-                        @include('web.portfolio.portfolioSingle')
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
+                                    <img alt="giftcash-project" src="{{ asset('images/projectImages/giftcash.png') }}" style="margin-top:35%;width:100%">
+                                    <div class="portfolio-info">
+                                        <span>Full-stack Development</span>
+                                        <h3>Laravel <br> Vue.js</h3>
+                                        <a href="{{ route('project.giftcash') }}" class="flat-btn"><i class="fa fa-link"></i> More...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
+                                    <img alt="brocando-project" src="{{ asset('images/projectImages/brocando.png') }}" style="margin-top:50%;width:100%">
+                                    <div class="portfolio-info">
+                                        <span>Backend Development</span>
+                                        <h3>Symfony FW <br> UI/UX</h3>
+                                        <a href="{{ route('project.brocando') }}" class="flat-btn"><i class="fa fa-link"></i> More...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
+                                    <img alt="mingo-project" src="{{ asset('images/projectImages/mingo.png') }}" style="margin:15% 0 0 5%;width:100%">
+                                    <div class="portfolio-info">
+                                        <span>Backend Development</span>
+                                        <h3>Laravel <br> UI/UX</h3>
+                                        <a href="{{ route('project.mingo') }}" class="flat-btn"><i class="fa fa-link"></i> More...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- ---------------------------------------------------------------------- --}}
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
+                                    <img alt="bsg-project" src="{{ asset('images/projectImages/playthings.png') }}" style="margin:40% 0 0 30%">
+                                    <div class="portfolio-info">
+                                        <span>Backend Development</span>
+                                        <h3>Laravel <br> UI/UX</h3>
+                                        <small>Development of a global SaaS product</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
+                                    <img alt="playthings-project" src="{{ asset('images/projectImages/dmg.png') }}" style="margin:40% 0 0 10%;">
+                                    <div class="portfolio-info">
+                                        <span>Backend Development</span>
+                                        <h3>SQL <br> Laravel</h3>
+                                        <small>Project development through corrupted database.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="mini-portfolio text-center" style="width:230px;height:300px;">
+                                    <p style="margin-top:50%;"><strong>More to be added soon...</strong></p>
+                                    <div class="portfolio-info">
+                                        <h3>More to be added soon...</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <aside class="col-md-4 column">
@@ -27,17 +95,15 @@
                         </div>
                         <div class="meet_admin">
                             <div class="mini-portfolio" style="width:300px;height:400px;background-color: rgba(0,0,0,0.3)">
-                                <img alt="" src="#">
+                                <img alt="giftcash-project" src="{{ asset('images/projectImages/giftcash.png') }}" style="margin-top:35%;width:100%;">
                                 <div class="portfolio-info">
-                                    <span>Design</span>
-                                    <h3>MUSHI is fully Hand Crafted Design</h3>
-                                    <ul>
-                                        <li><button class="btn" style="background-color: #FF2929;color:#fff"><i class="fa fa-link"></i> See more...</button></li>
-                                    </ul>
+                                    <span>Full-stack Development</span>
+                                    <h3>Laravel <br> Vue.js</h3>
+                                    <a href="{{ route('project.giftcash') }}" class="flat-btn"><i class="fa fa-link"></i> More...</a>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- Admin Widget -->
+                    </div>
 
                 </aside>
             </div>

@@ -105,32 +105,25 @@
                 <h2>TESTIMONIALS</h2>
             </div>
 
+            @foreach($testimonials as $testimonial)
             <div>
                 <p>
                     <i class="fa fa-quote-left" style="color:#FF2929"></i>
-                    Hrvoje was a very honest and reliable developer who helped push our start up to the next level. He is diligent and takes a strong initiative to solve difficult problems using a creative mindset. I would strongly recommend utilizing him as he is a strong asset for any company.
+                    {{ $testimonial->testimonial_content }}
                     <i class="fa fa-quote-right" style="color:#FF2929"></i><br>
-                    <strong>Colin Moffat, CEO <span style="color: #FF2929">@</span> GiftCash Inc</strong>
+                    <strong>
+                        {{ $testimonial->testimonial_author_name }}, {{ $testimonial->testimonial_author_role }}
+                        @if($testimonial->testimonial_author_company !== null)
+                            <span style="color: #FF2929">@</span> GiftCash Inc
+                        @endif
+                        @if($testimonial->testimonial_note !== null)
+                            <span> - {{ $testimonial->testimonial_note }}</span>
+                            @endif
+                    </strong>
                 </p>
             </div>
             <hr>
-            <div>
-                <p>
-                    <i class="fa fa-quote-left" style="color:#FF2929"></i>
-                    I would recommend Hrvoje for the position of PHP Web Developer (or other, if he acquire new language knowledge) to anyone, as he demonstrated strong will, creative approach to the problems, flawless communication with the clients and much more in such a short time. His rapid development and the learning curve is amazing and he would definitely be a valuable asset to any company!
-                    <i class="fa fa-quote-right" style="color:#FF2929"></i><br>
-                    <strong>Ivan Lozancic, CEO <span style="color: #FF2929">@</span> Gauss Development</strong>
-                </p>
-            </div>
-            <hr>
-            <div>
-                <p>
-                    <i class="fa fa-quote-left" style="color:#FF2929"></i>
-                    One of the best people I've worked with in years. Highly recommend!
-                    <i class="fa fa-quote-right" style="color:#FF2929"></i><br>
-                    <strong>Jay Syzdek, CTO <span style="color: #FF2929">@</span> Digital Marketing Group LLC</strong>
-                </p>
-            </div>
+            @endforeach
 
             <div class="text-center">
                 <span style="font-size: 55px; color: #FF2929">...</span>

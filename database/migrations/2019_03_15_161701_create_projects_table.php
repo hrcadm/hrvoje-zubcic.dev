@@ -17,9 +17,12 @@ class CreateProjectsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('short_description');
-            $table->text('content');
+            $table->string('content_title')->nullable()->default(null);
+            $table->text('content')->nullable()->default(null);
             $table->string('client')->nullable()->default(null);
             $table->string('project_url')->nullable()->default(null);
+            $table->string('logo')->nullable()->default(null);
+            $table->boolean('featured')->default(0);
             $table->timestamps();
         });
     }
