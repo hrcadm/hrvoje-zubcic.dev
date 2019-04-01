@@ -5367,6 +5367,7 @@ footer.light-footer .bottom-line a {
     border-bottom: 3px solid #000;
     color: #FF2929;
     font-weight: 600;
+    font-size: larger;
 }
 
 @media (max-width: 1200px) {

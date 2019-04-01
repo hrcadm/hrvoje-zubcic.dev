@@ -39,9 +39,15 @@ Route::post('subscribe-us', 'SubscriptionController@subscribe')->name('subscribe
 Route::post('contact-form-request', 'ContactFormController@contactFormSubmission')->name('contact-form-request');
 
 // Static routes for the projects for now
-Route::get('projects/brocando', 'ProjectController@brocando')->name('project.brocando');
-Route::get('projects/giftcash', 'ProjectController@giftcash')->name('project.giftcash');
-Route::get('projects/mingo', 'ProjectController@mingo')->name('project.mingo');
+Route::get('projects/brocando', function(){
+    return view('web.portfolio.brocando');
+})->name('project.brocando');
+Route::get('projects/giftcash', function(){
+    return view('web.portfolio.giftcash');
+})->name('project.giftcash');
+Route::get('projects/mingo', function(){
+    return view('web.portfolio.mingo');
+})->name('project.mingo');
 
 // ADMIN ROUETS
 Route::prefix('hrca')->middleware('auth')->group(function () {

@@ -79,7 +79,7 @@
 
                             <div class="col-md-4">
                                 <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
-                                    <img alt="opgdumancic-project" src="{{ asset('images/projectImages/dmg.png') }}" style="margin:40% 0 0 10%;">
+                                    <img alt="opgdumancic-project" src="{{ asset('images/projectImages/opgdumancic.jpg') }}" style="margin:40% 0 0 0%;">
                                     <div class="portfolio-info">
                                         <span>UI/UX Development</span>
                                         <h3>HTML/CSS/JS</h3>
