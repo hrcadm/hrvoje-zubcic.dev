@@ -28,5 +28,7 @@
 <script type="text/javascript" src="{{ asset('js/scrolltopcontrol.js') }}"></script><!-- ScrolltoTop -->
 <script type="text/javascript" src="{{ asset('js/scrolly.js') }}"></script><!-- Parallax -->
 
+@yield('customJavascript')
+
 </body>
 </html>

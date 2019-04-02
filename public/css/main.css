@@ -1198,7 +1198,7 @@ footer .blackish::before {
     width: 100%;
 }
 .meet_admin::before {
-    background: rgba(0, 0, 0, 0) url("../images/layer.png") no-repeat scroll 0 0 / 100% 100%;
+    background: rgba(0, 0, 0, 0) no-repeat scroll 0 0 / 100% 100%;
     content: "";
     height: 100%;
     left: 0;
@@ -5360,13 +5360,14 @@ footer.light-footer .bottom-line a {
 
 .tech-stack-item {
     border-bottom: 3px solid #FF2929;
-
+    font-weight: 600;
 }
 
 .tech-stack-item:hover {
     border-bottom: 3px solid #000;
     color: #FF2929;
     font-weight: 600;
+    font-size: larger;
 }
 
 @media (max-width: 1200px) {
