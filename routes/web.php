@@ -13,7 +13,7 @@
 
 // Authentication Routes...
 Route::get('hzdm', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('hzdm', 'Auth\LoginController@login');
+Route::post('hzdm', 'Auth\LoginController@login')->name('login.post');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // REGISTRATION AND FORGOT PASSWORD ROUTES DISABLED
