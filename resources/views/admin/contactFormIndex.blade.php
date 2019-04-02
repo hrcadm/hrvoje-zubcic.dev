@@ -17,7 +17,7 @@
             <tr>
                 <td>{{ $submission->id }}</td>
                 <td>{{ $submission->message_from }}</td>
-                <td>{{ $submission->Message_email }}</td>
+                <td>{{ $submission->message_email }}</td>
                 <td>{{ $submission->message_content }}</td>
                 <td>{{ $submission->created_at }}</td>
                 <td>
