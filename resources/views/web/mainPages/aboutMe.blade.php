@@ -114,7 +114,7 @@
                     <strong>
                         {{ $testimonial->testimonial_author_name }}, {{ $testimonial->testimonial_author_role }}
                         @if($testimonial->testimonial_author_company !== null)
-                            <span style="color: #FF2929">@</span> GiftCash Inc
+                            <span style="color: #FF2929">@</span> {{ $testimonial->testimonial_author_company }}
                         @endif
                         @if($testimonial->testimonial_note !== null)
                             <br><em> - {{ $testimonial->testimonial_note }}</em>
