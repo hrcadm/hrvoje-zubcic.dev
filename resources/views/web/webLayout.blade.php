@@ -6,8 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <meta property="og:site_name" content="Hrvoje Zubcic Portfolio Website"/>
-    <meta property="og:title" content="Welcome to Hrvoje Zubcic's website, a Web Application Developer"/>
-    <meta property="og:description" content="Hrvoje Zubcic Portfolio Website - Web Application Developer avaliable NOW"/>
+    <meta property="og:title" content="Hrvoje Zubcic - Web Application Developer"/>
+    <meta property="og:description" content="Welcome to my personal portfolio website!"/>
     <meta property="og:image" content="{{ asset('images/jaPreview.jpg') }}">
     <meta property="og:url" content="https://hrvoje-zubcic.dev">
     <meta property="og:type" content="portfolio"/>
