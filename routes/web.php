@@ -12,6 +12,8 @@
 */
 
 // Authentication Routes...
+use Illuminate\Support\Facades\Route;
+
 Route::get('hzdm', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('hzdm', 'Auth\LoginController@login')->name('login.post');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
