@@ -36,7 +36,7 @@
                 <td>{{ $project->title }}</td>
                 <td>{{ $project->short_description }}</td>
                 <td>{{ $project->client }}</td>
-                <td>{{ $project->featured }}</td>
+                <td>{{ ($project->featured === 1) ? 'Yes' : 'No' }}</td>
                 <td>
                     <a href="{{ route('adminShowProject', $project->id) }}" class="btn btn-sm btn-primary">Show</a>
                     <a href="{{ route('adminEditProject', $project->id) }}" class="btn btn-sm btn-success">Edit</a>

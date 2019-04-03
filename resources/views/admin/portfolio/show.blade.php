@@ -9,7 +9,7 @@
                     {{ $project->title }} (Featured: {{ ($project->featured === 1) ? 'Yes' : 'No' }})
                 </div>
                 <div class="card-body">
-                    <img src="#" alt="logo">
+                    <img src="{{ asset('storage/projectLogos/' . $project->logo) }}" alt="logo" style="width: 300px;height: 300px;">
                     <h5 class="card-title">Client: {{ $project->client }}</h5>
                     <h6 class="card-title">URL: {{ ($project->project_url) ? $project->project_url : 'n/a' }}</h6>
                     <p class="card-text">Short Description: {{ $project->short_desc }}</p>

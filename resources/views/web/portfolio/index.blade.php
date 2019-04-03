@@ -18,7 +18,22 @@
                 <div class="col-md-8 column">
                     <div class="portfolio-mini-sec">
                         <div class="row">
+
+                            @foreach($projects as $project)
                             <div class="col-md-4">
+                                <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
+                                    <img alt="{{ $project->title }}" src="{{ asset('storage/projectLogos/'. $project->logo) }}" style="margin-top:35%;width:100%">
+                                    <div class="portfolio-info">
+                                        <span>{{ $project->title }}</span>
+                                        <h3>{{ $project->short_description }}</h3>
+                                        <a href="#" class="flat-btn"><i class="fa fa-link"></i> More...</a>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+
+
+                            {{--<div class="col-md-4">
                                 <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
                                     <img alt="giftcash-project" src="{{ asset('images/projectImages/giftcash.png') }}" style="margin-top:35%;width:100%">
                                     <div class="portfolio-info">
@@ -50,11 +65,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--}}
 
                         {{-- ---------------------------------------------------------------------- --}}
 
-                        <div class="row">
+                        {{--<div class="row">
                             <div class="col-md-4">
                                 <div class="mini-portfolio" style="width:230px;height:300px;background-color: rgba(0,0,0,0.3)">
                                     <img alt="bsg-project" src="{{ asset('images/projectImages/playthings.png') }}" style="margin:40% 0 0 30%">
@@ -88,8 +103,8 @@
                                 </div>
                             </div>
 
+                        </div>--}}
                         </div>
-
                         <div class="row text-center mt-5">
                             <div class="col-md-12">
                                 <span style="color:#FF2929"><strong>More to be added soon...</strong></span>

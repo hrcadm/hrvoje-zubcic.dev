@@ -24,7 +24,6 @@
             <th>ID</th>
             <th>Title</th>
             <th>Short Desc</th>
-            <th>Content</th>
             <th>Category</th>
             <th>Actions</th>
         </tr>
@@ -35,7 +34,6 @@
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->short_description }}</td>
-                <td>{{ substr($post->content, 0, 20) }}</td>
                 <td>{{ $post->category->name }}</td>
                 <td>
                     <a href="{{ route('adminShowPost', $post->id) }}" class="btn btn-sm btn-primary">Show</a>

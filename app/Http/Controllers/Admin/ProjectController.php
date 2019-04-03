@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -52,8 +53,9 @@ class ProjectController extends Controller
     public function show($id)
     {
         $project = Project::findOrFail($id);
+        $logo = storage_path('app/projectLogos/' . $project->logo);
 
-        return view('admin.portfolio.show', compact('project'));
+        return view('admin.portfolio.show', compact('project', 'logo'));
     }
 
     /**
@@ -67,7 +69,8 @@ class ProjectController extends Controller
         $request->validate([
             'projectTitle' => 'required',
             'projectFeatured' => 'required',
-            'projectShortDesc' => 'required'
+            'projectShortDesc' => 'required',
+            'projectLogo' => 'required|file'
         ]);
 
         $newProject = new Project();
@@ -80,6 +83,9 @@ class ProjectController extends Controller
         $newProject->project_url = ($request->get('projectUrl')) ? $request->get('projectUrl') : null;
         $newProject->logo = ($request->get('projectLogo')) ? $request->get('projectLogo') : null;
         $newProject->featured = ($request->get('projectFeatured') === 'yes') ? 1 : 0;
+        $newProject->logo = str_replace(' ','',strtolower($request->get('projectTitle')) . '.jpg');
+
+        $request->projectLogo->storeAs('public/projectLogos', str_replace(' ','',strtolower($request->get('projectTitle')) . '.jpg'));
 
         $newProject->save();
 
@@ -103,6 +109,9 @@ class ProjectController extends Controller
 
         $update = Project::findOrFail($id);
 
+        // remove old logo image
+        Storage::delete('public/projectLogos' . $update->logo);
+
         $update->title = $request->get('projectTitle');
         $update->short_description = $request->get('projectShortDesc');
         $update->content_title = ($request->get('projectContentTitle')) ? $request->get('projectContentTitle') : null;
@@ -111,6 +120,11 @@ class ProjectController extends Controller
         $update->project_url = ($request->get('projectUrl')) ? $request->get('projectUrl') : null;
         $update->logo = ($request->get('projectLogo')) ? $request->get('projectLogo') : null;
         $update->featured = ($request->get('projectFeatured') === 'yes') ? 1 : 0;
+        $update->logo = str_replace(' ','',strtolower($request->get('projectTitle')) . '.jpg');
+
+
+        // store new logo image
+        $request->projectLogo->storeAs('public/projectLogos', str_replace(' ','',strtolower($request->get('projectTitle')) . '.jpg'));
 
         $update->save();
 
@@ -127,6 +141,9 @@ class ProjectController extends Controller
     {
         $delete = Project::findOrFail($id);
         $delete->delete();
+
+        // remove logo image with model
+        Storage::delete('public/projectLogos' . $delete->logo);
 
         return redirect()->route('adminAllProjects')->with('msg', 'successDeleteProject');
     }

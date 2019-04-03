@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,9 @@ class PagesController extends Controller
 
     public function portfolio()
     {
-        return view('web.portfolio.index');
+        $projects = Project::all();
+
+        return view('web.portfolio.index', compact('projects'));
     }
 
     public function blog()

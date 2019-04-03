@@ -55,6 +55,9 @@ Route::get('projects/mingo', function(){
 Route::prefix('hrca')->middleware('auth')->group(function () {
     // Dashboard
     Route::get('home', 'Admin\HomeController@index')->name('adminHome');
+    Route::get('/', function() {
+        return redirect()->route('adminHome');
+    });
 
     // BLOG ROUTES
     Route::prefix('posts')->group(function () {
