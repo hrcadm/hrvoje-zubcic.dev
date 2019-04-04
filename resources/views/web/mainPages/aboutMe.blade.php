@@ -1,5 +1,7 @@
 @extends('web.webLayout')
 
+@section('pageTitle', 'About Me')
+
 @section('content')
     <div class="inner-head overlap">
         <div data-velocity="-.2" style="background: repeat scroll 50% 422.28px #CCCCCC;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
@@ -72,6 +74,28 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="follow_widget widget">
+                                    <div class="heading2">
+                                        <h3>Avability (Pick your needed combo)</h3>
+                                    </div>
+                                    <div class="social_widget">
+                                        <ul style="list-style-type: none; text-align: left">
+                                            <li>
+                                                <i class="fa fa-arrow-circle-right" style="color: #FF2929; font-size: 20px;"></i> Full-time / Part-time
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-arrow-circle-right" style="color: #FF2929; font-size: 20px;"></i> Remote / Freelance
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-arrow-circle-right" style="color: #FF2929; font-size: 20px;"></i> Ongoing / Per project
+                                            </li>
+                                            <li><br></li>
+                                            <li>
+                                                <strong><i class="fa fa-arrow-right"></i> I'm currently <span style="color: #1c7430">AVAILABLE</span> for work!</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="fancy-gallery-infos">
@@ -101,6 +125,36 @@
 
     <section style="margin-bottom:5em;">
         <div class="container">
+
+            <div class="heading4" style="margin-top:2em">
+                <h2>What can I offer?</h2>
+            </div>
+
+            <div class="text-center">
+                <p>
+                    Depends on your needs, actually. Have you chosen your Avability Combo already?
+                </p>
+                <p>
+                    Once you've decided your needed combo, matched my skills with your requirements, checked out my portfolio and references and looked around the page
+                    <br><i class="fa fa-arrow-circle-right" style="color:#FF2929"></i> drop me a message and I'll get in touch as soon as possible for further talks.
+                </p>
+                <p>
+                    I'm a professional, heavy duty learner of new technologies while perfecting the ones I know already. Flexibility and adaptability are my pros too.
+                    <br>
+                    I've worked with clients all over the world, both as a freelancer and as a remote employee. I have no issues adapting to the tech stacks, timezones etc.
+                </p>
+                <p>
+                    If you have a position that you believe I would fit in, please do <a href="{{ route('contact') }}"><strong>inform me</strong></a> of it! If you don't have an opening at the moment, but would like to work with me in the future,
+                    please do <strong>subscribe</strong> to the updates regarding my work avability, or <a href="{{ route('contact') }}"><strong>send me a message</strong></a> so we can stay in touch :)
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="margin-bottom:5em;">
+        <div class="container">
+
             <div class="heading4" style="margin-top:2em">
                 <h2>TESTIMONIALS</h2>
             </div>

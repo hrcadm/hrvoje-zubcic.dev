@@ -1,5 +1,7 @@
 @extends('web.webLayout')
 
+@section('pageTitle', 'Contact Me')
+
 @section('content')
     <div class="inner-head overlap">
         <div data-velocity="-.2" style="background: repeat scroll 50% 422.28px #CCCCCC;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->

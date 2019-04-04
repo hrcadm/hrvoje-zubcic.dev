@@ -14,7 +14,7 @@
 
 
 
-    <title>{{ config('app.name') }}</title>
+    <title>@yield('pageTitle') | {{ config('app.name') }}</title>
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 

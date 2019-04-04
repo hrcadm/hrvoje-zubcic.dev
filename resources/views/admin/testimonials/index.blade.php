@@ -18,7 +18,7 @@
 
     <a href="{{ route('adminNewTestimonial') }}" class="btn btn-outline-success">Create New Testimonial</a>
 
-    <table class="table table-responsive table-hover"  style="width: auto; margin-top:2em;">
+    <table class="table table-responsive table-hover"  style="margin-top:2em;">
         <thead>
             <tr>
                 <th>ID</th>
@@ -38,7 +38,13 @@
                     <td>{{ $testimonial->testimonial_author_name }}</td>
                     <td>{{ $testimonial->testimonial_author_role }}</td>
                     <td>{{ $testimonial->testimonial_author_company }}</td>
-                    <td>{{ $testimonial->testimonial_note }}</td>
+                    <td class="text-center">
+                        @if($testimonial->testimonial_note !== null)
+                            {{ $testimonial->testimonial_note }}
+                        @else
+                            <i class="fa fa-times" style="color: #FF0000"></i>
+                        @endif
+                    </td>
                     <td>
                         <a href="{{ route('adminShowTestimonial', $testimonial->id) }}" class="btn btn-sm btn-primary">Show</a>
                         <a href="{{ route('adminEditTestimonial', $testimonial->id) }}" class="btn btn-sm btn-success">Edit</a>

@@ -12,6 +12,8 @@
 */
 
 // Authentication Routes...
+use Illuminate\Support\Facades\Route;
+
 Route::get('hzdm', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('hzdm', 'Auth\LoginController@login')->name('login.post');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
@@ -38,21 +40,15 @@ Route::get('contact', 'PagesController@contact')->name('contact');
 Route::post('subscribe-us', 'SubscriptionController@subscribe')->name('subscribe-us');
 Route::post('contact-form-request', 'ContactFormController@contactFormSubmission')->name('contact-form-request');
 
-// Static routes for the projects for now
-Route::get('projects/brocando', function(){
-    return view('web.portfolio.brocando');
-})->name('project.brocando');
-Route::get('projects/giftcash', function(){
-    return view('web.portfolio.giftcash');
-})->name('project.giftcash');
-Route::get('projects/mingo', function(){
-    return view('web.portfolio.mingo');
-})->name('project.mingo');
+Route::get('project/{title}', 'PagesController@portfolioSingle')->name('publicPortfolioSingle');
 
 // ADMIN ROUETS
 Route::prefix('hrca')->middleware('auth')->group(function () {
     // Dashboard
     Route::get('home', 'Admin\HomeController@index')->name('adminHome');
+    Route::get('/', function() {
+        return redirect()->route('adminHome');
+    });
 
     // BLOG ROUTES
     Route::prefix('posts')->group(function () {
