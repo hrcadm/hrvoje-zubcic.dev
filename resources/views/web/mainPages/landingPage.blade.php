@@ -1,5 +1,7 @@
 @extends('web.webLayout')
 
+@section('pageTitle', 'Welcome')
+
 @section('content')
     <section class="block">
         <div class="container">

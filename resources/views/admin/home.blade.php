@@ -2,9 +2,18 @@
 
 @section('content')
 
-<h1>hello</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Alias amet dolores est ipsum iusto molestiae officiis porro totam?
-    Delectus explicabo numquam sit? Consectetur facere iure labore laudantium quia, tempora ullam.</p>
+<div class="row">
+    <div class="col-12">
+        <h1>Dashboard</h1>
+    </div>
+</div>
+
+<div class="row alert alert-success">
+    <div class="col-12">
+        <p>Posts: 0</p>
+        <p>Contact Form Submits: 1</p>
+        <p>Subscriptions: 4</p>
+    </div>
+</div>
 
 @endsection

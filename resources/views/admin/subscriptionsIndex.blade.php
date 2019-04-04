@@ -5,7 +5,7 @@
         Subscribers: {{ count($subscriptions) }}
     </div>
 
-    <table class="table table-responsive table-hover"  style="width: auto; margin-top:2em;">
+    <table class="table table-responsive table-hover"  style="margin-top:2em;">
         <thead>
         <tr>
             <th>ID</th>

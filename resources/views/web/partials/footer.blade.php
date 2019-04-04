@@ -20,7 +20,7 @@
 
                         <span><i class="fa fa-envelope"></i>info@hrvoje-zubcic.dev</span>
                         <span><i class="fa fa-phone"></i>+385 97 66 222 18</span>
-                        <span><i class="fa fa-location-arrow"></i>E. Kvaternika 1, 31540 Donji Miholjac, Croatia</span>
+                        <span><i class="fa fa-location-arrow"></i>31540 Donji Miholjac, Croatia</span>
                     </div>
                 </div>
                 <div class="col-md-3 column">
@@ -72,7 +72,7 @@
             </div>
         </div>
         <div style="text-align: center;margin-top: 3em;">
-            <span>Copyright &copy; All Right Reserved 2019 &#8226; Developed by: <a href="mailto:info@hrvoje-zubcic.dev" title="">Hrvoje Zubcic</a></span>
+            <span>© 2019 <a href="{{ route('contact') }}">Hrvoje Zubcic</a>. All rights reserved.</span>
         </div>
     </section>
 </footer>

@@ -1,7 +1,6 @@
 @extends('admin.layouts.app')
 
 @section('tinymce')
-    <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=bryudn13ntrxh54wc3si1oi14yc4oeslvh7ljmq9xdbf8hnh"></script>
     <script>tinymce.init({
             selector: "textarea",
             plugins: 'fullpage powerpaste searchreplace autolink directionality advcode visualblocks visualchars fullscreen link table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount a11ychecker textpattern help formatpainter permanentpen pageembed mentions linkchecker',

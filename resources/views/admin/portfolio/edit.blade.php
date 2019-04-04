@@ -1,5 +1,13 @@
 @extends('admin.layouts.app')
 
+@section('tinymce')
+    <script>tinymce.init({
+            selector: "textarea",
+            plugins: 'fullpage powerpaste searchreplace autolink directionality advcode visualblocks visualchars fullscreen link table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount a11ychecker textpattern help formatpainter permanentpen pageembed mentions linkchecker',
+            toolbar: 'formatselect | bold italic strikethrough forecolor backcolor formatpainter | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | removeformat',
+        });</script>
+@endsection
+
 @section('content')
 
     <div class="row">

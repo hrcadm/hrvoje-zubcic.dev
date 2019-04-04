@@ -12,6 +12,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=bryudn13ntrxh54wc3si1oi14yc4oeslvh7ljmq9xdbf8hnh"></script>
+
     @yield('tinymce')
 
     <!-- Fonts -->
@@ -20,11 +22,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
 <body style="margin-bottom: 5em;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -46,22 +49,17 @@
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                         @else
+                            <li class="nav-item"><i class="fa fa-bell"></i></li>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </li>
                         @endguest
                     </ul>
@@ -69,49 +67,51 @@
             </div>
         </nav>
 
-        <div class="container">
-            <section id="adminSidebar" style="float: left;margin-top: 2em;margin-right: 2em; border-right: 1px solid lightgrey;">
-                <ul style="list-style-type: none;margin-right:1em;">
-                    <li><a href="{{ route('adminHome') }}">Dashboard</a></li>
-                    <li>
-                        <hr>
-                        <strong>Blog</strong>
-                    </li>
-                    <li><a href="{{ route('adminAllPosts') }}">All Posts</a></li>
-                    <li><a href="{{ route('adminNewPost') }}">Create New Post</a></li>
-                    <li>
-                        <hr>
-                        <strong>Portfolio</strong>
-                    </li>
-                    <li><a href="{{ route('adminAllProjects') }}">All Projects</a></li>
-                    <li><a href="{{ route('adminNewProject') }}">Add New Project</a></li>
-                    <li>
-                        <hr>
-                        <strong>Testimoials</strong>
-                    </li>
-                    <li><a href="{{ route('adminAllTestimonials') }}">All Testimonials</a></li>
-                    <li><a href="{{ route('adminNewTestimonial') }}">Add New Testimonial</a></li>
-                    <li>
-                        <hr>
-                        <strong>Contact</strong>
-                    </li>
-                    <li><a href="{{ route('adminAllContactFormSubmissions') }}">Contact Form Submissions</a></li>
-                    <li>
-                        <hr>
-                        <strong>Subscriptions</strong>
-                    </li>
-                    <li><a href="{{ route('adminAllSubscriptions') }}">All Subscriptions</a></li>
-                    <li>
-                        <hr>
+        <section class="container-fluid" style="float:left">
+                <section style="margin-top: 2em;border-right: 1px solid lightgrey;width:20%;float:left;">
+                    <ul style="list-style-type: none;margin-right:1em;">
+                        <li><a href="{{ route('adminHome') }}">Dashboard</a></li>
+                        <li>
+                            <hr>
+                            <strong>Blog</strong>
+                        </li>
+                        <li><a href="{{ route('adminAllPosts') }}">All Posts</a></li>
+                        <li><a href="{{ route('adminNewPost') }}">Create New Post</a></li>
+                        <li>
+                            <hr>
+                            <strong>Portfolio</strong>
+                        </li>
+                        <li><a href="{{ route('adminAllProjects') }}">All Projects</a></li>
+                        <li><a href="{{ route('adminNewProject') }}">Add New Project</a></li>
+                        <li>
+                            <hr>
+                            <strong>Testimoials</strong>
+                        </li>
+                        <li><a href="{{ route('adminAllTestimonials') }}">All Testimonials</a></li>
+                        <li><a href="{{ route('adminNewTestimonial') }}">Add New Testimonial</a></li>
+                        <li>
+                            <hr>
+                            <strong>Contact</strong>
+                        </li>
+                        <li><a href="{{ route('adminAllContactFormSubmissions') }}">Contact Form Submissions</a></li>
+                        <li>
+                            <hr>
+                            <strong>Subscriptions</strong>
+                        </li>
+                        <li><a href="{{ route('adminAllSubscriptions') }}">All Subscriptions</a></li>
+                        <li>
+                            <hr>
                         <li><a href="{{ route('home') }}">Quit</a>
-                    </li>
-                </ul>
-            </section>
+                        </li>
+                    </ul>
+                </section>
 
-            <section id="adminContent" style="margin-top:2em;overflow:hidden">
-                    @yield('content')
-            </section>
-        </div>
+                <section style="margin-top:2em;width:75%;float:right;">
+                        @yield('content')
+                </section>
+        </section>
     </div>
+
+    <script src="{{ asset('js/scripts.js') }}"></script>
 </body>
 </html>
